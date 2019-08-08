@@ -1,6 +1,7 @@
+CREATE DATABASE API_notes;
+
 CREATE TABLE notes (
 ID INT NO NULL PRIMARY KEY AUTO_INCREMENT , 
-title varchar(255) UNIQUE NOT NULL, 
+title varchar(50) UNIQUE NOT NULL, 
 textbody text(1000)
-
 )  
