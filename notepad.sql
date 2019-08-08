@@ -1,6 +1,6 @@
 CREATE TABLE notes (
-ID INT PRIMARY KEY AUTO_INCREMENT , 
+ID INT NO NULL PRIMARY KEY AUTO_INCREMENT , 
 title varchar(255) UNIQUE NOT NULL, 
-textbody text
+textbody text(1000)
 
 )  
