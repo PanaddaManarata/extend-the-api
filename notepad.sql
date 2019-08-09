@@ -2,6 +2,6 @@ CREATE DATABASE IF NOT EXISTS API_notes;
 
 CREATE TABLE IF NOT EXISTS notes (
 ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT , 
-title varchar(50) UNIQUE NOT NULL, 
-textbody varchar(MAX)
+title varchar(255) UNIQUE NOT NULL, 
+content varchar
 ); 
