@@ -2,9 +2,13 @@
 $servername = "localhost";
 $username = "admin";
 $password =  "xwGiEQe9uXH0";
+$dbname = "dataIPA"; 
 
 $title = filter_var($_GET['title'], FILTER_SANITIZE_STRING); 
 $content = filter_var($_POST['content'], FILTER_SANITIZE_STRING);
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname );
 
 //add notes
 
@@ -18,7 +22,6 @@ if (isset($_GET['title'])){
         } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
         }
-  
 }
 }
 
@@ -26,7 +29,7 @@ if (isset($_GET['title'])){
 
 if(isset($_GET['list'])){
 
-    $sql = "SELECT * FROM .notes"; 
+    $sql = "SELECT * FROM notes";   
     $result = $conn->query($sql);
     if($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
@@ -85,8 +88,6 @@ if(isset($_GET['select'])){
 }
 
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
