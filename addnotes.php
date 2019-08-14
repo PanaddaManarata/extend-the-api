@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require 'config.php'; 
 
@@ -6,6 +6,3 @@ require 'config.php';
 
 
 
-
-
-?>
