@@ -1,9 +1,0 @@
-<?php
-
-require 'config.php'; 
-
-
-
-
-
-?>
